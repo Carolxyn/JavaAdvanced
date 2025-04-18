@@ -33,10 +33,11 @@ Este projeto demonstra o uso de conceitos avançados de Java com Spring Boot, in
 ```bash
 git clone https://github.com/Carolxyn/JavaAdvanced.git
 cd JavaAdvanced
-2. Configure o banco Oracle no arquivo application.properties:
-properties
-Copiar
-Editar
+```
+
+### 2. Configure o banco Oracle no arquivo `application.properties`:
+
+```properties
 spring.datasource.url=jdbc:oracle:thin:@//localhost:1521/XEPDB1
 spring.datasource.username=SEU_USUARIO
 spring.datasource.password=SUA_SENHA
@@ -47,34 +48,46 @@ spring.jpa.show-sql=true
 
 spring.flyway.enabled=true
 spring.flyway.locations=classpath:db/migration
-💡 Lembre-se de criar a sequência CONTATOS_SEQ no Oracle, ou inclua um script Flyway com isso.
+```
 
-3. Execute o projeto com Maven:
-bash
-Copiar
-Editar
+> 💡 Lembre-se de criar a sequência `CONTATOS_SEQ` no Oracle, ou inclua um script Flyway com isso.
+
+### 3. Execute o projeto com Maven:
+
+```bash
 ./mvnw spring-boot:run
-📫 Endpoints da API
+```
 
-Método	Endpoint	Descrição
-POST	/contatos	Cadastrar novo contato
-GET	/contatos	Listar todos os contatos
-GET	/contatos/{id}	Buscar contato por ID
-PUT	/contatos/{id}	Atualizar contato
-DELETE	/contatos/{id}	Remover contato
-🧠 Destaques Técnicos
-Uso de @Entity, @Table, @Id, @GeneratedValue, @Column com JPA
+---
 
-Integração com Oracle usando ojdbc11
+## 📫 Endpoints da API
 
-Versionamento de scripts com Flyway
+| Método | Endpoint         | Descrição                |
+|--------|------------------|--------------------------|
+| POST   | `/contatos`      | Cadastrar novo contato   |
+| GET    | `/contatos`      | Listar todos os contatos |
+| GET    | `/contatos/{id}` | Buscar contato por ID    |
+| PUT    | `/contatos/{id}` | Atualizar contato        |
+| DELETE | `/contatos/{id}` | Remover contato          |
 
-Boas práticas de arquitetura e nomenclatura JavaBeans
+---
 
-Persistência correta de datas (LocalDate com @Column(name = "data_nascimento"))
+## 🧠 Destaques Técnicos
 
-👩‍💻 Desenvolvedora
-Desenvolvido por @Carolxyn com muito 💙 e foco em boas práticas de Java!
+- Uso de `@Entity`, `@Table`, `@Id`, `@GeneratedValue`, `@Column` com JPA
+- Integração com Oracle usando `ojdbc11`
+- Versionamento de scripts com Flyway
+- Boas práticas de arquitetura e nomenclatura JavaBeans
+- Persistência correta de datas (`LocalDate` com `@Column(name = "data_nascimento")`)
 
-📜 Licença
+---
+
+## 👩‍💻 Desenvolvedora
+
+Desenvolvido por [@Carolxyn](https://github.com/Carolxyn) com muito 💙 e foco em boas práticas de Java!
+
+---
+
+## 📜 Licença
+
 Este projeto está sob a licença MIT. Sinta-se à vontade para usar, modificar e compartilhar.
