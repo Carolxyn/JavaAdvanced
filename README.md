@@ -1,7 +1,4 @@
-📄 README.md
-markdown
-Copiar
-Editar
+
 # ☕ Java Advanced - Gestão de Contatos
 
 Este projeto demonstra o uso de conceitos avançados de Java com Spring Boot, incluindo persistência de dados com Spring Data JPA e integração com banco de dados Oracle. A aplicação permite o **cadastro, listagem e gerenciamento de contatos**.
